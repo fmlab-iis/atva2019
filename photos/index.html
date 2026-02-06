@@ -1,0 +1,477 @@
+<!doctype html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      /* tiny: 160x104, thumb: 835x541 */
+      --img-width: 835px; //642px;
+      --img-height: 541px; //416px;
+    }
+    #main {
+      width: 850px;
+      margin: 10px auto;
+      position: relative;
+
+    }
+    .title {
+      font-size: 24px;
+      color: rgb(80,80,80);
+    }
+    .header {
+      margin: 10px auto;
+      position: relative;
+      width: 300px;
+      text-align: center;
+    }
+    .footer {
+      margin: 10px auto;
+      position: relative;
+      width: 300px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .float_right {
+      float: right;
+    }
+    .float_left {
+      float: left;
+    }
+    #slides {
+      margin: 20px auto;
+      position: relative;
+      width: var(--img-width);
+      height: var(--img-height);
+      padding-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    #slides > div {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+    }
+    #slides > div > img {
+      width: var(--img-width);
+      height: var(--img-height);
+    }
+    #gallery {
+      width: 850px;
+      margin: 20px auto;
+      position: relative;
+    }
+    .ibox {
+      margin: 5px 5px 5px 5px;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+  <script type="text/javascript">
+    var files = [
+      /* 2019/10/28 */
+      "img/20191028/IMG_0540_thumb.JPG",
+      "img/20191028/IMG_0543_thumb.JPG",
+      "img/20191028/IMG_0545_thumb.JPG",
+      "img/20191028/IMG_0546_thumb.JPG",
+      "img/20191028/IMG_0548_thumb.JPG",
+      "img/20191028/IMG_0549_thumb.JPG",
+      "img/20191028/IMG_0552_thumb.JPG",
+      "img/20191028/IMG_0553_thumb.JPG",
+      "img/20191028/IMG_0555_thumb.JPG",
+      "img/20191028/IMG_0557_thumb.JPG",
+      "img/20191028/IMG_0558_thumb.JPG",
+      "img/20191028/IMG_0560_thumb.JPG",
+      "img/20191028/IMG_0561_thumb.JPG",
+      "img/20191028/IMG_0562_thumb.JPG",
+      "img/20191028/IMG_0568_thumb.JPG",
+      "img/20191028/IMG_0570_thumb.JPG",
+      "img/20191028/IMG_0572_thumb.JPG",
+      "img/20191028/IMG_0574_thumb.JPG",
+      "img/20191028/IMG_0578_thumb.JPG",
+      "img/20191028/IMG_0582_thumb.JPG",
+      "img/20191028/IMG_0585_thumb.JPG",
+      "img/20191028/IMG_0587_thumb.JPG",
+      "img/20191028/IMG_0588_thumb.JPG",
+      "img/20191028/IMG_0589_thumb.JPG",
+      "img/20191028/IMG_0591_thumb.JPG",
+      "img/20191028/IMG_0592_thumb.JPG",
+      "img/20191028/IMG_0595_thumb.JPG",
+      "img/20191028/IMG_0599_thumb.JPG",
+      "img/20191028/IMG_0600_thumb.JPG",
+      "img/20191028/IMG_0602_thumb.JPG",
+      "img/20191028/IMG_0604_thumb.JPG",
+      "img/20191028/IMG_0605_thumb.JPG",
+      "img/20191028/IMG_0606_thumb.JPG",
+      "img/20191028/IMG_0607_thumb.JPG",
+      "img/20191028/IMG_0608_thumb.JPG",
+      "img/20191028/IMG_0609_thumb.JPG",
+      "img/20191028/IMG_0611_thumb.JPG",
+      "img/20191028/IMG_0612_thumb.JPG",
+      "img/20191028/IMG_0613_thumb.JPG",
+      "img/20191028/IMG_0614_thumb.JPG",
+      "img/20191028/IMG_0615_thumb.JPG",
+      "img/20191028/IMG_0616_thumb.JPG",
+      "img/20191028/IMG_0617_thumb.JPG",
+      "img/20191028/IMG_0618_thumb.JPG",
+      "img/20191028/IMG_0619_thumb.JPG",
+      "img/20191028/IMG_0623_thumb.JPG",
+      "img/20191028/IMG_0625_thumb.JPG",
+      "img/20191028/IMG_0626_thumb.JPG",
+      "img/20191028/IMG_0627_thumb.JPG",
+      "img/20191028/IMG_0628_thumb.JPG",
+      "img/20191028/IMG_0630_thumb.JPG",
+      "img/20191028/IMG_0631_thumb.JPG",
+      "img/20191028/IMG_0632_thumb.JPG",
+      /* 2019/10/29 */
+      "img/20191029/IMG_0635_thumb.JPG",
+      "img/20191029/IMG_0637_thumb.JPG",
+      "img/20191029/IMG_0641_thumb.JPG",
+      "img/20191029/IMG_0643_thumb.JPG",
+      "img/20191029/IMG_0646_thumb.JPG",
+      "img/20191029/IMG_0647_thumb.JPG",
+      "img/20191029/IMG_0648_thumb.JPG",
+      "img/20191029/IMG_0649_thumb.JPG",
+      "img/20191029/IMG_0653_thumb.JPG",
+      "img/20191029/IMG_0658_thumb.JPG",
+      "img/20191029/IMG_0661_thumb.JPG",
+      "img/20191029/IMG_0665_thumb.JPG",
+      "img/20191029/IMG_0666_thumb.JPG",
+      "img/20191029/IMG_0667_thumb.JPG",
+      "img/20191029/IMG_0671_thumb.JPG",
+      "img/20191029/IMG_0673_thumb.JPG",
+      "img/20191029/IMG_0675_thumb.JPG",
+      "img/20191029/IMG_0681_thumb.JPG",
+      "img/20191029/IMG_0682_thumb.JPG",
+      "img/20191029/IMG_0683_thumb.JPG",
+      "img/20191029/IMG_0684_thumb.JPG",
+      "img/20191029/IMG_0685_thumb.JPG",
+      "img/20191029/IMG_0688_thumb.JPG",
+      "img/20191029/IMG_0689_thumb.JPG",
+      "img/20191029/IMG_0690_thumb.JPG",
+      "img/20191029/IMG_0691_thumb.JPG",
+      "img/20191029/IMG_0692_thumb.JPG",
+      "img/20191029/IMG_0693_thumb.JPG",
+      "img/20191029/IMG_0695_thumb.JPG",
+      "img/20191029/IMG_0697_thumb.JPG",
+      "img/20191029/IMG_0699_thumb.JPG",
+      "img/20191029/IMG_0700_thumb.JPG",
+      "img/20191029/IMG_0703_thumb.JPG",
+      "img/20191029/IMG_0704_thumb.JPG",
+      "img/20191029/IMG_0705_thumb.JPG",
+      "img/20191029/IMG_0706_thumb.JPG",
+      "img/20191029/IMG_0707_thumb.JPG",
+      "img/20191029/IMG_0709_thumb.JPG",
+      "img/20191029/IMG_0712_thumb.JPG",
+      "img/20191029/IMG_0713_thumb.JPG",
+      "img/20191029/IMG_0714_thumb.JPG",
+      "img/20191029/IMG_0717_thumb.JPG",
+      "img/20191029/IMG_0718_thumb.JPG",
+      "img/20191029/IMG_0722_thumb.JPG",
+      "img/20191029/IMG_0724_thumb.JPG",
+      "img/20191029/IMG_0728_thumb.JPG",
+      /* 2019/10/30 */
+      "img/20191030/IMG_0732_thumb.JPG",
+      "img/20191030/IMG_0733_thumb.JPG",
+      "img/20191030/IMG_0734_thumb.JPG",
+      "img/20191030/IMG_0737_thumb.JPG",
+      "img/20191030/IMG_0738_thumb.JPG",
+      "img/20191030/IMG_0739_thumb.JPG",
+      "img/20191030/IMG_0740_thumb.JPG",
+      "img/20191030/IMG_0741_thumb.JPG",
+      "img/20191030/IMG_0742_thumb.JPG",
+      "img/20191030/IMG_0743_thumb.JPG",
+      "img/20191030/IMG_0745_thumb.JPG",
+      "img/20191030/IMG_0746_thumb.JPG",
+      "img/20191030/IMG_0748_thumb.JPG",
+      "img/20191030/IMG_0749_thumb.JPG",
+      "img/20191030/IMG_0752_thumb.JPG",
+      "img/20191030/IMG_0755_thumb.JPG",
+      "img/20191030/IMG_0756_thumb.JPG",
+      "img/20191030/IMG_0757_thumb.JPG",
+      "img/20191030/IMG_0758_thumb.JPG",
+      "img/20191030/IMG_0759_thumb.JPG",
+      "img/20191030/IMG_0760_thumb.JPG",
+      "img/20191030/IMG_0762_thumb.JPG",
+      "img/20191030/IMG_0766_thumb.JPG",
+      "img/20191030/IMG_0768_thumb.JPG",
+      "img/20191030/IMG_0771_thumb.JPG",
+      "img/20191030/IMG_0774_thumb.JPG",
+      "img/20191030/IMG_0776_thumb.JPG",
+      "img/20191030/IMG_0778_thumb.JPG",
+      "img/20191030/IMG_0781_thumb.JPG",
+      "img/20191030/IMG_0782_thumb.JPG",
+      "img/20191030/IMG_0783_thumb.JPG",
+      "img/20191030/IMG_0786_thumb.JPG",
+      "img/20191030/IMG_0787_thumb.JPG",
+      "img/20191030/IMG_0789_thumb.JPG",
+      "img/20191030/IMG_0790_thumb.JPG",
+      "img/20191030/IMG_0791_thumb.JPG",
+      "img/20191030/IMG_0792_thumb.JPG",
+      "img/20191030/IMG_0793_thumb.JPG",
+      "img/20191030/IMG_0794_thumb.JPG",
+      "img/20191030/IMG_0795_thumb.JPG",
+      "img/20191030/IMG_0796_thumb.JPG",
+      "img/20191030/IMG_0797_thumb.JPG",
+      "img/20191030/IMG_0801_thumb.JPG",
+      "img/20191030/IMG_0803_thumb.JPG",
+      "img/20191030/IMG_0804_thumb.JPG",
+      "img/20191030/IMG_0805_thumb.JPG",
+      "img/20191030/IMG_0807_thumb.JPG",
+      "img/20191030/IMG_0812_thumb.JPG",
+      "img/20191030/IMG_0816_thumb.JPG",
+      "img/20191030/IMG_0820_thumb.JPG",
+      "img/20191030/IMG_0822_thumb.JPG",
+      "img/20191030/IMG_0825_thumb.JPG",
+      "img/20191030/IMG_0830_thumb.JPG",
+      "img/20191030/IMG_0834_thumb.JPG",
+      "img/20191030/IMG_0835_thumb.JPG",
+      "img/20191030/IMG_0836_thumb.JPG",
+      "img/20191030/IMG_0840_thumb.JPG",
+      "img/20191030/IMG_0841_thumb.JPG",
+      "img/20191030/IMG_0842_thumb.JPG",
+      "img/20191030/IMG_0843_thumb.JPG",
+      "img/20191030/IMG_0844_thumb.JPG",
+      "img/20191030/IMG_0846_thumb.JPG",
+      "img/20191030/IMG_0847_thumb.JPG",
+      "img/20191030/IMG_0849_thumb.JPG",
+      "img/20191030/IMG_0851_thumb.JPG",
+      "img/20191030/IMG_0855_thumb.JPG",
+      "img/20191030/IMG_0859_thumb.JPG",
+      "img/20191030/IMG_0863_thumb.JPG",
+      "img/20191030/IMG_0864_thumb.JPG",
+      "img/20191030/IMG_0867_thumb.JPG",
+      "img/20191030/IMG_0870_thumb.JPG",
+      "img/20191030/IMG_0872_thumb.JPG",
+      "img/20191030/IMG_0874_thumb.JPG",
+      "img/20191030/IMG_0881_thumb.JPG",
+      "img/20191030/IMG_0885_thumb.JPG",
+      "img/20191030/IMG_0886_thumb.JPG",
+      "img/20191030/IMG_0887_thumb.JPG",
+      "img/20191030/IMG_0890_thumb.JPG",
+      "img/20191030/IMG_0896_thumb.JPG",
+      "img/20191030/IMG_0898_thumb.JPG",
+      "img/20191030/IMG_0900_thumb.JPG",
+      "img/20191030/IMG_0901_thumb.JPG",
+      "img/20191030/IMG_0903_thumb.JPG",
+      "img/20191030/IMG_0905_thumb.JPG",
+      "img/20191030/IMG_0906_thumb.JPG",
+      "img/20191030/IMG_5347_thumb.JPG",
+      "img/20191030/IMG_5348_thumb.JPG",
+      "img/20191030/IMG_5350_thumb.JPG",
+      "img/20191030/IMG_5359_thumb.JPG",
+      "img/20191030/IMG_5360_thumb.JPG",
+      "img/20191030/IMG_5361_thumb.JPG",
+      "img/20191030/IMG_5362_thumb.JPG",
+      "img/20191030/IMG_5363_thumb.JPG",
+      "img/20191030/IMG_5364_thumb.JPG",
+      "img/20191030/IMG_5366_thumb.JPG",
+      "img/20191030/IMG_5369_thumb.JPG",
+      "img/20191030/IMG_5371_thumb.JPG",
+      "img/20191030/IMG_5375_thumb.JPG",
+      "img/20191030/IMG_5379_thumb.JPG",
+      "img/20191030/IMG_5381_thumb.JPG",
+      "img/20191030/IMG_5386_thumb.JPG",
+      "img/20191030/IMG_5387_thumb.JPG",
+      "img/20191030/IMG_5389_thumb.JPG",
+      "img/20191030/IMG_5390_thumb.JPG",
+      "img/20191030/IMG_5394_thumb.JPG",
+      "img/20191030/IMG_5396_thumb.JPG",
+      "img/20191030/IMG_5398_thumb.JPG",
+      /* 2019/10/31 */
+      "img/20191031/IMG_0916_thumb.JPG",
+      "img/20191031/IMG_0917_thumb.JPG",
+      "img/20191031/IMG_0918_thumb.JPG",
+      "img/20191031/IMG_0923_thumb.JPG",
+      "img/20191031/IMG_0924_thumb.JPG",
+      "img/20191031/IMG_0927_thumb.JPG",
+      "img/20191031/IMG_0929_thumb.JPG",
+      "img/20191031/IMG_0930_thumb.JPG",
+      "img/20191031/IMG_0932_thumb.JPG",
+      "img/20191031/IMG_0936_thumb.JPG",
+      "img/20191031/IMG_0940_thumb.JPG",
+      "img/20191031/IMG_0941_thumb.JPG",
+      "img/20191031/IMG_0942_thumb.JPG",
+      "img/20191031/IMG_0945_thumb.JPG",
+      "img/20191031/IMG_0948_thumb.JPG",
+      "img/20191031/IMG_0953_thumb.JPG",
+      "img/20191031/IMG_0956_thumb.JPG",
+      "img/20191031/IMG_0957_thumb.JPG",
+      "img/20191031/IMG_0959_thumb.JPG",
+      "img/20191031/IMG_0962_thumb.JPG",
+      "img/20191031/IMG_0965_thumb.JPG",
+      "img/20191031/IMG_0966_thumb.JPG",
+      "img/20191031/IMG_0970_thumb.JPG",
+      "img/20191031/IMG_0971_thumb.JPG",
+      "img/20191031/IMG_0978_thumb.JPG",
+      "img/20191031/IMG_0981_thumb.JPG",
+      "img/20191031/IMG_0982_thumb.JPG",
+      "img/20191031/IMG_0983_thumb.JPG"
+    ];
+
+    var cid = 0;
+    var playing = false;
+    var day1 = 20191028;
+    var num_col = 5;
+
+    function show(id) {
+      show(id, 1000);
+    }
+
+    function show(id, duration) {
+      $("#image_" + id).fadeIn(duration);
+      var path = $("#image_" + id + " > a:first > img:first").prop('src');
+      var last_slash = path.lastIndexOf("/");
+      path = path.substring(0, last_slash);
+      last_slash = path.lastIndexOf("/");
+      var date = path.substring(last_slash + 1, path.length);
+      var dn = parseInt(date) - day1 + 1;
+      date = date.substring(0, 4) + "/" + date.substring(4, 6) + "/" + date.substring(6, 8);
+      $("#title").text("ATVA Day " + dn + " (" + date + ")");
+      $("#page").text((id + 1) + " / " + files.length);
+    }
+
+    function hide(id) {
+      hide(id, 1000);
+    }
+
+    function hide(id, duration) {
+      $("#image_" + id).fadeOut(duration);
+    }
+
+    function wrap(id, fn, title) {
+      if ($("#" + id).parent().is("div"))
+        $("#" + id).wrap("<a href=\"javascript:" + fn + "();\" title=\"" + title + "\"></a>");
+    }
+
+    function unwrap(id) {
+      if ($("#" + id).parent().is("a"))
+        $("#" + id).unwrap();
+    }
+
+    function play() {
+      playing = true;
+      unwrap("first");
+      unwrap("prev");
+      unwrap("play");
+      wrap("stop", "stop", "Stop");
+      unwrap("next");
+      unwrap("last");
+      next();
+    }
+
+    function next() {
+      hide(cid);
+      cid = (cid + 1) % files.length;
+      show(cid);
+      if (playing) {
+        setTimeout(function () {
+          if (playing)
+            next();
+        }, 3000);
+      }
+    }
+
+    function prev() {
+      hide(cid);
+      cid = (cid - 1 + files.length) % files.length;
+      show(cid);
+    }
+
+    function jump(id) {
+      hide(cid, 0);
+      cid = id;
+      show(cid, 0);
+      $("#gallery").fadeOut(500);
+      $("#slideshow").fadeIn(500);
+    }
+
+    function stop() {
+      playing = false;
+      wrap("first", "first", "First");
+      wrap("prev", "prev", "Previous");
+      wrap("play", "play", "Play");
+      wrap("", "", "");
+      unwrap("stop");
+      wrap("next", "next", "Next");
+      wrap("last", "last", "Last");
+    }
+
+    function first() {
+      hide(cid);
+      cid = 0;
+      show(cid);
+    }
+
+    function last() {
+      hide(cid);
+      cid = files.length - 1;
+      show(cid);
+    }
+
+    function gallery() {
+      if (playing) stop();
+      $("#slideshow").fadeOut(500);
+      $("#gallery").fadeIn(500);
+    }
+
+    function inject() {
+      for (var i in files) {
+        var thumb = files[i];
+        var small = thumb.replace("_thumb", "_small");
+        var tiny = thumb.replace("_thumb", "_tiny");
+        $("#slides").append(
+          "<div id=\"image_" + i + "\"><a href=\"" + small + "\"><img src=\"" + thumb + "\"></a></div>"
+        );
+        $("#gallery").append(
+          "<span class=\"ibox\" id=\"image_" + i + "\"><a href=\"javascript:jump(" + i + ");\"><img src=\"" + tiny + "\"></a></span>"
+        );
+        if (i % num_col == num_col - 1)
+        $("#gallery").append("<br/>");
+      }
+      $("#page").text((cid + 1) + " / " + files.length);
+    }
+
+    function initial() {
+      $("#slides > div:gt(0)").hide();
+      unwrap("stop");
+      $("#gallery").show();
+    }
+
+    $(function() {
+      inject();
+      initial();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="slideshow" style="display: none;">
+      <div id="controls" class="float_right">
+        <a href="javascript:first();" title="First"><i id="first" class="material-icons">skip_previous</i></a>
+        <a href="javascript:prev();" title="Previous"><i id="prev" class="material-icons">fast_rewind</i></a>
+        <a href="javascript:play();" title="Play"><i id="play" class="material-icons">play_arrow</i></a>
+        <a href="javascript:stop();" title="Pause"><i id="stop" class="material-icons">pause</i></a>
+        <a href="javascript:next();" title="Next"><i id="next" class="material-icons">fast_forward</i></a>
+        <a href="javascript:last();" title="Last"><i id="last" class="material-icons">skip_next</i></a>
+      </div>
+      <div class="float_left">
+        <a href="javascript:gallery();" title="Gallery"><i class="material-icons">view_module</i></a>
+      </div>
+      <div class="header">
+        <span class="title" id="title">ATVA Day 1 (2019/10/28)</span>
+      </div>
+      <div id="slides">
+      </div>
+      <div class="footer">
+        <span id="page"></span>
+      </div>
+    </div> <!-- end of slideshow -->
+    <div id="gallery" style="display: none;">
+      <div class="header">
+        <span class="title">ATVA 2019</span>
+      </div>
+    </div> <!-- end of gallery -->
+  </div> <!-- end of main -->
+</body>

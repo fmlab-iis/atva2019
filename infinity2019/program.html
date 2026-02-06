@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>INFINITY 2019</title>
+    <link rel="stylesheet" href="./INFINITY_2019/styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="main" class="width">
+        <aside id="sidebar" class="column-left">
+            <header>
+                <img src="./INFINITY_2019/infinity.gif" alt="INFINITY">
+            </header>
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="index.html">Welcome</a></li>
+                    <li class="selected-item"><a href="program.html">Program</a></li>
+                    <li><a href="organization.html">Organization</a></li>
+                    <li><a href="speaker.html">Invited Speakers</a></li>
+                    <li><a href="past.html">Past Events</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="content" class="column-right">
+            <h1>INFINITY 2019</h1>
+            <h3>Program</h3>
+            <table>
+                <tr>
+                    <td style="vertical-align:top; width:5.5em"> 9:05 &ndash; 9:10</td>
+                    <td style="vertical-align:top"> Welcome <br/>
+                    CHAIR: Sven Schewe, University of Liverpool, UK
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top">
+                        9:15 &ndash; 10:15
+                    </td>
+                    <td style="vertical-align:top">
+                        <a href="https://www.comp.nus.edu.sg/cs/bio/sanjay/">Sanjay Jain</a>
+                        , Nationl University of Singapore
+                        <br>
+                        <strong> Near polynomial time algorithms for Parity Games </strong>
+                        <br>
+                        <details>
+                            <summary style="cursor:pointer"> <i> Abstract: </i> </summary>
+                            This talk will explain the Quasi Polynomial time algorithm for parity games given by Calude et al (STOC 2017).
+                            The run time of this algorithm is O(n<sup>log(m)+6</sup>), where $n$ is the number of nodes and $m$ is the number of colours.
+                            When parameterized over $m$, the number of colours, the problem is fixed parameter tractable with runtime of O(n<sup>5</sup>+g(m)), where g(m) is m<sup>m+6</sup>.
+                            This algorithm was improved by Jurdzinski and Lazic (LICS 2017) and Fearnley et al (SPIN 2017) to make it simultaneously in near linear space. 
+                            Lehtinen (LICS 2018) introduced the notion of register index complexity which is logarithmic in the number of nodes.
+                            A parity game with register index complexity k, can be solved in time m<sup>O(k)</sup> * n<sup>O(1)</sup> which provides another quasipolynomial time algorithm for parity games.
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top">
+                        10:15 &ndash; 10:45
+                    </td>
+                    <td style="vertical-align:top">
+                        Coffee Break
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top">
+                        10:45 &ndash; 11:45
+                    </td>
+                    <td style="vertical-align:top">
+                        <a href="https://iscasmc.ios.ac.cn/?page_id=148">Lijun Zhang</a>, Institute of Software, China Academy of Sciences
+                        <br>
+                        <strong> Omega-automata learning algorithms and its applications </strong>
+                        <br>
+                        <details>
+                            <summary style="cursor:pointer"> <i> Abstract: </i> </summary>
+                            Learning-based automata inference techniques have received significant attention from the community of formal system analysis. 
+                            In general, the primary applications of automata learning in the community can be categorized into two: improving efficiency and scalability of verification and synthesizing abstract system model for further analysis. Most of the results in the literature focus on checking safety properties or synthesizing finite behavior models of systems/programs.
+                            On the other side, Büchi automaton is the standard model for describing liveness properties of distributed systems. 
+                            Unlike the case for finite automata learning, learning algorithms for Büchi automata are very rarely used in our community. In this talk, we present algorithms to learn a Büchi automaton from a teacher who knows an omega-regular language. 
+                            The algorithm is based on learning a formalism named family of DFAs (FDFAs) recently proposed by Angluin and Fisman.
+                            The main catch is that we use a classification tree structure instead of the standard observation table structure.
+                            The worst case storage space required by our algorithm is quadratically better than the table-based algorithm.
+                            We implement the first publicly available library ROLL (Regular Omega Language Learning), which consists of all omega-regular learning algorithms available in the literature and the new algorithms proposed in this paper. 
+                            Further, with our tool, we demonstrate how our algorithm can be exploited in classical automata operations such as complementation checking and in the model checking context.
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top">
+                        11:45 &ndash; 13:00
+                    </td>
+                    <td style="vertical-align:top">
+                        Lunch Break
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top">
+                        13:30 &ndash; 14:30
+                    </td>
+                    <td style="vertical-align:top">
+                        <a href="https://www.city.ac.uk/people/academics/laure-daviaud">Laure Daviaud</a>, City University of London
+                        <br>
+                        <strong>Solving mean-payoff parity games in pseudo-quasi polynomial time</strong>
+                        <br>
+                        <details>
+                            <summary style="cursor:pointer"> <i> Abstract: </i> </summary> 
+                            Mean-payoff parity games extend parity games, enforcing one of the player to ensure a quantitative objective (minimise some cost) as well as the usual parity condition that Prof. Jain will discuss during the first talk. I will present a pseudo-quasi polynomial time algorithm to solve these games.
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align:top">
+                        14:30 &ndash; 15:00
+                    </td>
+                    <td style="vertical-align:top">
+                        Coffee Break
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align:top">
+                        15:00 &ndash; 16:00
+                    </td>
+                    <td style="vertical-align:top">
+                        <a href="https://ashut.bitbucket.io/">Ashutosh Trivedi</a>, University of Colorado Boulder
+                        <br>
+                        <strong>Reinforcement Learning and Formal Requirements </strong></br>
+                        <details>
+                            <summary style="cursor:pointer"> <i> Abstract: </i> </summary>
+                            Reinforcement learning is an approach to controller synthesis where agents rely on reward signals to choose actions in order to satisfy the requirements implicit in reward signals. Oftentimes non-experts have to come up with the requirements and their translation to rewards under significant time pressure, even though manual translation is time-consuming and error-prone. For safety-critical applications of reinforcement learning, a rigorous design methodology is needed and, in particular, a principled approach to requirement specification and to the translation of objectives into the form required by reinforcement learning algorithms. Formal logic provides a foundation for the rigorous and unambiguous requirement specification of learning objectives. 
+                            However, reinforcement learning algorithms require requirements to be expressed as scalar reward signals.
+                            We discuss a recent technique, called limit-reachability, that bridges this gap by faithfully translating logic-based requirements into the scalar reward form needed in model-free reinforcement learning.
+                            This technique enables the synthesis of controllers that maximize the probability to satisfy given logical requirements using off-the-shelf, model-free reinforcement learning algorithms.
+                        </details>
+                    </td>
+                </tr>
+            </table>
+            <footer class="clear">
+                <hr>
+                <p>&copy; 2019 INFINITY. Based on <a href="http://zypopwebtemplates.com/">Free CSS Templates</a> by ZyPOP</p>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
