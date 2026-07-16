@@ -197,7 +197,7 @@ body {
 	width: 24px;
 	padding-left: 0;
 	padding-right: 0;
-	background: url('https://fmlab-iis.github.io/atva2019/wp-content/themes/images/social.png') 0 50% no-repeat;
+	background: url('https://atva2019.iis.sinica.edu.tw/wp-content/themes/images/social.png') 0 50% no-repeat;
 	color: transparent;
 	text-indent: -9999px;
 	padding-left: 4px;
@@ -433,7 +433,7 @@ body {
 	margin-top: -1px;
 	/* cover the bottom border of the main featured content area */
 
-	background: #fff url('https://fmlab-iis.github.io/atva2019/wp-content/themes/images/absurdidad.png') 0 0 repeat;
+	background: #fff url('https://atva2019.iis.sinica.edu.tw/wp-content/themes/images/absurdidad.png') 0 0 repeat;
 }
 .featured-content-secondary article {
 	margin-left: 10px;

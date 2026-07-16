@@ -79,7 +79,7 @@
 	appearance:none;
 	-moz-appearance:none;
 	-webkit-appearance:none;
-	background:#fff url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/themes/light/images/selectshape.png');
+	background:#fff url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/themes/light/images/selectshape.png');
 	background-repeat:no-repeat;
 	background-position:right 10px center;
 	height: 30px;
@@ -87,10 +87,10 @@
     padding: 2px 5px;
 }
 .ui-widget-header .ui-icon {
-	background-image: url("https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/themes/light/images/ui-icons_default_theme256x240.png");
+	background-image: url("https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/themes/light/images/ui-icons_default_theme256x240.png");
 }
 .elfinder-toolbar .elfinder-button-search .ui-icon-search {
-	background-image: url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/themes/light/images/search-default.svg') !important;
+	background-image: url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/themes/light/images/search-default.svg') !important;
 	background-position: inherit;
 background-size: 15px;
 }
@@ -120,7 +120,7 @@ background-size: 15px;
 	padding: 5px 12px;
 }
 .elfinder .elfinder-cwd table thead td.ui-state-active {
-	 background: inherit !important; 
+	 background: inherit !important;
 }
 .elfinder .elfinder-cwd-wrapper-list table thead tr td:hover {
     background: inherit !important;
@@ -130,7 +130,7 @@ background-size: 15px;
 	background: #f9f9f9 !important;
 }
 .elfinder-cwd-view-list thead td .ui-resizable-handle {
-	top: 9px;	
+	top: 9px;
 }
 div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	top: 10px;
@@ -140,7 +140,7 @@ div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
 	padding: 0px;
 }
 .ui-state-default, thead .ui-widget-content .ui-state-default{
-	
+
 }
 .ui-widget-header.ui-corner-top thead .ui-corner-all.ui-widget-content .ui-state-default td{
 	background:#fff !important;

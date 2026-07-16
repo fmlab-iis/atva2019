@@ -16,10 +16,10 @@
 .elfinder .elfinder-dialog .ui-dialog-titlebar-close,
 .elfinder .elfinder-dialog .elfinder-titlebar-minimize,
 .elfinder .elfinder-dialog .elfinder-titlebar-full{
-  background: url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/themes/windows - 10/images/win_10_sprite_icon.png');
+  background: url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/themes/windows - 10/images/win_10_sprite_icon.png');
   right: 0;
   border-radius: 0;
-  margin-top: -13px; 
+  margin-top: -13px;
   left: -7px;
   -webkit-transition: background 0.3s; /* Safari */
   transition: background-image 0.3s;
@@ -78,7 +78,7 @@
   /* */
  }
 .elfinder .ui-state-active {
-	background: #1979CA none repeat scroll 0 0;	
+	background: #1979CA none repeat scroll 0 0;
 	/*background: #009688 none repeat scroll 0 0;	*/
 }
 /* Icons */
@@ -150,4 +150,4 @@
 .elfinder .elfinder-dialog .elfinder-titlebar-minimize .ui-icon.ui-icon-minusthick,
 .elfinder .elfinder-dialog .elfinder-titlebar-full .ui-icon.ui-icon-plusthick,
 .elfinder .elfinder-dialog .ui-dialog-titlebar-close .ui-icon.ui-icon-closethick,
-.elfinder .elfinder-dialog .elfinder-titlebar-full .ui-icon.ui-icon-arrowreturnthick-1-s{ background: inherit; } 
+.elfinder .elfinder-dialog .elfinder-titlebar-full .ui-icon.ui-icon-arrowreturnthick-1-s{ background: inherit; }

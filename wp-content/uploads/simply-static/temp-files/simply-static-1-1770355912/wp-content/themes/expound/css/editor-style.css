@@ -1,8 +1,8 @@
-@import url('https://fmlab-iis.github.io/atva2019/wp-content/themes/expound/css/reset.css');
-@import url('https://fmlab-iis.github.io/atva2019/wp-content/themes/expound/css/expound.css?v=20131116');
+@import url('https://atva2019.iis.sinica.edu.tw/wp-content/themes/expound/css/reset.css');
+@import url('https://atva2019.iis.sinica.edu.tw/wp-content/themes/expound/css/expound.css?v=20131116');
 
 body {
-	background: #f3f3f3 url('https://fmlab-iis.github.io/atva2019/wp-content/themes/expound/images/editor-style-bg.png') 0 0 repeat-y;
+	background: #f3f3f3 url('https://atva2019.iis.sinica.edu.tw/wp-content/themes/expound/images/editor-style-bg.png') 0 0 repeat-y;
 	margin: 40px;
 	max-width: 700px;
 	padding: 0;

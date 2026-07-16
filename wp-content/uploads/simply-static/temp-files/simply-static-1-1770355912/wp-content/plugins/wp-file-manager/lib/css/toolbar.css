@@ -93,7 +93,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
-    background: url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') no-repeat;
+    background: url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/toolbar.png') no-repeat;
 }
 
 .elfinder-button-text {
@@ -390,7 +390,7 @@
 
 /* button with spinner icon */
 .elfinder-button-icon-spinner {
-    background: url("https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
+    background: url("https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/spinner-mini.gif") center center no-repeat;
 }
 
 /* menu */
@@ -609,12 +609,12 @@
 }
 
 /* Theme Search Fix */
-.elfinder-toolbar .elfinder-button-search .ui-icon-search{ 
-    background-image: url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/black-search.png');
+.elfinder-toolbar .elfinder-button-search .ui-icon-search{
+    background-image: url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/black-search.png');
     background-position: 7px 3px;
-} 
+}
 .elfinder-toolbar .elfinder-button-search .ui-icon-close{
-    background-image: url('https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/black-close.png');
+    background-image: url('https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/black-close.png');
     background-position: 2px 3px;
 }
 

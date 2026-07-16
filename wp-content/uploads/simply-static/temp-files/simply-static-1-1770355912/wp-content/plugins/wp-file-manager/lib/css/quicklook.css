@@ -1,7 +1,7 @@
 /* quicklook window */
 .elfinder-quicklook {
     position: absolute;
-    background: url("https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/quicklook-bg.png");
+    background: url("https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/quicklook-bg.png");
     overflow: hidden;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -26,7 +26,7 @@
     height: 14px;
     right: 5px;
     bottom: 3px;
-    background: url("https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/toolbar.png") 0 -496px no-repeat;
+    background: url("https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/toolbar.png") 0 -496px no-repeat;
 }
 
 .elfinder-quicklook.elfinder-touch .ui-resizable-se {
@@ -359,7 +359,7 @@
     height: 32px;
     margin: 0 7px;
     float: left;
-    background: url("https://fmlab-iis.github.io/atva2019/wp-content/plugins/wp-file-manager/lib/img/quicklook-icons.png") 0 0 no-repeat;
+    background: url("https://atva2019.iis.sinica.edu.tw/wp-content/plugins/wp-file-manager/lib/img/quicklook-icons.png") 0 0 no-repeat;
 
 }
 
